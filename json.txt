@@ -1,0 +1,557 @@
+{
+    "MStationQRCode": "https://damai-item.oss-cn-beijing.aliyuncs.com/projQcode/5931311420/2/593131142099.jpg",
+    "appNeedUpGrade": false,
+    "buyBtnOrigin": 16,
+    "buyBtnShow": "",
+    "buyBtnStatus": 91,
+    "buyBtnText": "缺货登记",
+    "hasItemCouponTag": false,
+    "hasItemPromotionTag": false,
+    "isSoldOutAndNoUnpaid": true,
+    "itemCouponTag": [],
+    "itemPromotionTag": [],
+    "needRealNameCertified": false,
+    "performBases": [
+        {
+            "name": "10.17 周四",
+            "performBaseTagDesc": "无票",
+            "performBaseTagValue": 1,
+            "performs": [
+                {
+                    "chooseSeatType": 5,
+                    "itemId": 593131142099,
+                    "performBeginTime": "20:00",
+                    "performDate": 1571313600000,
+                    "performDesc": "按付款顺序配票，优先连座配票",
+                    "performId": 210041345,
+                    "performName": "2019-10-17 周四 20:00",
+                    "performStartDate": "2019-10-17",
+                    "performTagDesc": "无票",
+                    "performTagValue": 1,
+                    "performTime": "2019.10.17 20:00-21:30",
+                    "permissionWithPrivilegeBuy": true,
+                    "privilegeLimitBuy": 99999,
+                    "projectId": 200290016,
+                    "promotionTags": [
+                        "无票"
+                    ],
+                    "saleForm": 2,
+                    "singleLimit": 2,
+                    "skuList": [
+                        {
+                            "dashPrice": "580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 580,
+                            "priceId": 220763201,
+                            "priceIdOfTC": 220763201,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159006,
+                            "skuName": "580元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 980,
+                            "priceId": 220779173,
+                            "priceIdOfTC": 220779173,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159007,
+                            "skuName": "980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1680",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1680,
+                            "priceId": 220767170,
+                            "priceIdOfTC": 220767170,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159008,
+                            "skuName": "1680元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1980,
+                            "priceId": 220763199,
+                            "priceIdOfTC": 220763199,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159009,
+                            "skuName": "1980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "2580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 2580,
+                            "priceId": 220762155,
+                            "priceIdOfTC": 220762155,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159010,
+                            "skuName": "2580元内场",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        }
+                    ],
+                    "supportGroup": false
+                }
+            ],
+            "permissionWithPrivilegeBuy": true,
+            "promotionTags": [
+                "无票"
+            ],
+            "timeSpan": 1571241600000,
+            "type": 1
+        },
+        {
+            "name": "10.18 周五",
+            "performBaseTagDesc": "无票",
+            "performBaseTagValue": 1,
+            "performs": [
+                {
+                    "chooseSeatType": 5,
+                    "itemId": 593131142099,
+                    "performBeginTime": "20:00",
+                    "performDate": 1571400000000,
+                    "performDesc": "按付款顺序配票，优先连座配票",
+                    "performId": 210041348,
+                    "performName": "2019-10-18 周五 20:00",
+                    "performStartDate": "2019-10-18",
+                    "performTagDesc": "无票",
+                    "performTagValue": 1,
+                    "performTime": "2019.10.18 20:00-21:30",
+                    "permissionWithPrivilegeBuy": true,
+                    "privilegeLimitBuy": 99999,
+                    "projectId": 200290016,
+                    "promotionTags": [
+                        "无票"
+                    ],
+                    "saleForm": 2,
+                    "singleLimit": 2,
+                    "skuList": [
+                        {
+                            "dashPrice": "580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 580,
+                            "priceId": 220765177,
+                            "priceIdOfTC": 220765177,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159001,
+                            "skuName": "580元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 980,
+                            "priceId": 220782182,
+                            "priceIdOfTC": 220782182,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159002,
+                            "skuName": "980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1680",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1680,
+                            "priceId": 220772170,
+                            "priceIdOfTC": 220772170,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159003,
+                            "skuName": "1680元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1980,
+                            "priceId": 220785181,
+                            "priceIdOfTC": 220785181,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": true,
+                            "skuId": 4261745159004,
+                            "skuName": "1980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "2580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 2580,
+                            "priceId": 220776210,
+                            "priceIdOfTC": 220776210,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4261745159005,
+                            "skuName": "2580元内场",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        }
+                    ],
+                    "supportGroup": false
+                }
+            ],
+            "permissionWithPrivilegeBuy": true,
+            "promotionTags": [
+                "无票"
+            ],
+            "timeSpan": 1571328000000,
+            "type": 1
+        },
+        {
+            "name": "10.19 周六",
+            "performBaseTagDesc": "无票",
+            "performBaseTagValue": 1,
+            "performs": [
+                {
+                    "chooseSeatType": 5,
+                    "itemId": 593131142099,
+                    "performBeginTime": "19:30",
+                    "performDate": 1571484600000,
+                    "performDesc": "按付款顺序配票，优先连座配票",
+                    "performId": 210041351,
+                    "performName": "2019-10-19 周六 19:30",
+                    "performStartDate": "2019-10-19",
+                    "performTagDesc": "无票",
+                    "performTagValue": 1,
+                    "performTime": "2019.10.19 19:30-21:00",
+                    "permissionWithPrivilegeBuy": true,
+                    "privilegeLimitBuy": 99999,
+                    "projectId": 200290016,
+                    "promotionTags": [
+                        "无票"
+                    ],
+                    "saleForm": 2,
+                    "singleLimit": 2,
+                    "skuList": [
+                        {
+                            "dashPrice": "580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 580,
+                            "priceId": 220763203,
+                            "priceIdOfTC": 220763203,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661996,
+                            "skuName": "580元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 980,
+                            "priceId": 220766222,
+                            "priceIdOfTC": 220766222,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661997,
+                            "skuName": "980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1680",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1680,
+                            "priceId": 220781175,
+                            "priceIdOfTC": 220781175,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661998,
+                            "skuName": "1680元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1980,
+                            "priceId": 220762157,
+                            "priceIdOfTC": 220762157,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661999,
+                            "skuName": "1980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "2580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 2580,
+                            "priceId": 220762156,
+                            "priceIdOfTC": 220762156,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396662000,
+                            "skuName": "2580元内场",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        }
+                    ],
+                    "supportGroup": false
+                }
+            ],
+            "permissionWithPrivilegeBuy": true,
+            "promotionTags": [
+                "无票"
+            ],
+            "timeSpan": 1571414400000,
+            "type": 1
+        },
+        {
+            "name": "10.20 周日",
+            "performBaseTagDesc": "无票",
+            "performBaseTagValue": 1,
+            "performs": [
+                {
+                    "chooseSeatType": 5,
+                    "itemId": 593131142099,
+                    "performBeginTime": "19:30",
+                    "performDate": 1571571000000,
+                    "performDesc": "按付款顺序配票，优先连座配票",
+                    "performId": 210041355,
+                    "performName": "2019-10-20 周日 19:30",
+                    "performStartDate": "2019-10-20",
+                    "performTagDesc": "无票",
+                    "performTagValue": 1,
+                    "performTime": "2019.10.20 19:30-21:00",
+                    "permissionWithPrivilegeBuy": true,
+                    "privilegeLimitBuy": 99999,
+                    "projectId": 200290016,
+                    "promotionTags": [
+                        "无票"
+                    ],
+                    "saleForm": 2,
+                    "singleLimit": 2,
+                    "skuList": [
+                        {
+                            "dashPrice": "580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 580,
+                            "priceId": 220767172,
+                            "priceIdOfTC": 220767172,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661991,
+                            "skuName": "580元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 980,
+                            "priceId": 220771182,
+                            "priceIdOfTC": 220771182,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661992,
+                            "skuName": "980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1680",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1680,
+                            "priceId": 220767171,
+                            "priceIdOfTC": 220767171,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": true,
+                            "skuId": 4092396661993,
+                            "skuName": "1680元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "1980",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 1980,
+                            "priceId": 220774190,
+                            "priceIdOfTC": 220774190,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661994,
+                            "skuName": "1980元看台",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        },
+                        {
+                            "dashPrice": "2580",
+                            "packagesFlag": false,
+                            "permissionWithPrivilegeBuy": true,
+                            "price": 2580,
+                            "priceId": 220779174,
+                            "priceIdOfTC": 220779174,
+                            "promotionTags": [
+                                "缺货登记"
+                            ],
+                            "qwh": 0,
+                            "saq": 0,
+                            "skuEnable": false,
+                            "skuId": 4092396661995,
+                            "skuName": "2580元内场",
+                            "skuStatus": 1,
+                            "skuTag": "缺货登记",
+                            "skuTagType": 1
+                        }
+                    ],
+                    "supportGroup": false
+                }
+            ],
+            "permissionWithPrivilegeBuy": true,
+            "promotionTags": [
+                "无票"
+            ],
+            "timeSpan": 1571500800000,
+            "type": 1
+        }
+    ],
+    "performCount": 4,
+    "priceRange": "¥580-¥2580",
+    "refreshAfterCountDown": true,
+    "sellStartTime": 1563263110000,
+    "sellStartTimeStr": "07月16日 15:45",
+    "showQRCode": false,
+    "statusNotice": {
+        "hasPopup": true,
+        "notice": "本商品为预售商品，正式开票后将在第一时间为您配送",
+        "popupContent": "预售期间，由于主办未正式开票，下单后无法立即配送票品。一般演出前2-6周出票，待正式开票后将在第一时间为您配送，请耐心等待。纸质票购票后可在订单详情页查看物流信息",
+        "popupTitle": "重要通知",
+        "prefixText": "预售"
+    }
+}

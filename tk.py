@@ -5,6 +5,7 @@ import random
 import json
 import os
 from DaMaiFunc import DaMaiFunc
+import threading
 
 class tkFunc(object):
     def __init__(self):
@@ -27,35 +28,44 @@ class tkFunc(object):
     def EditConfig(self):
         def ConfirmConfig():
             #将配置写入文件
+            # 浏览器端口号，起点：startPort（20000以上）  终点：startPort+threadCount
             username = usernameTxT.get()
-            port = random.randint(20000, 25000)
+            startPort = startPortTxT.get()
+            threadCount = threadTxT.get()
             config = {
                 "username": username,
-                "port": port
+                "startPort": int(startPort),
+                "threadCount": int(threadCount)
             }
 
             #删除之前有的配置文件
             CUR_PATH = os.path.abspath('.')
             for x in os.listdir(CUR_PATH):
                 path_now = os.path.join(CUR_PATH, x)
-                if os.path.isfile(path_now) and "config_" in os.path.splitext(x)[0]:
+                if os.path.isfile(path_now) and "config" in os.path.splitext(x)[0]:
                     # 删除查找到的文件
                     os.remove(path_now)
 
             #写入新的配置文件
-            with open(r'config_' + str(port) + '.config', 'w') as f:
+            with open(r'config.txt', 'w') as f:
                 jsonTxt = json.dumps(config)
                 f.write(jsonTxt)
 
             # 账号、端口提示
             userTips = StringVar()
             portTips = StringVar()
+            threadTips = StringVar()
+
             userTips.set(username)
-            portTips.set(port)
+            portTips.set(startPort)
+            threadTips.set(threadCount)
+
             Label(self.window, text='账号:', bg='green').place(x=30, y=30)
-            Entry(self.window, state="readonly", textvariable=userTips).place(x=80, y=30)
-            Label(self.window, text='端口:', bg='green').place(x=30, y=60)
-            Entry(self.window, state="readonly", textvariable=portTips).place(x=80, y=60)
+            Entry(self.window, state="readonly", textvariable=userTips).place(x=100, y=30)
+            Label(self.window, text='起始端口:', bg='green').place(x=30, y=60)
+            Entry(self.window, state="readonly", textvariable=portTips).place(x=100, y=60)
+            Label(self.window, text='线程数:', bg='green').place(x=300, y=30)
+            Entry(self.window, state="readonly", textvariable=threadTips).place(x=350, y=30)
 
             # 然后销毁窗口。
             self.top.destroy()
@@ -70,9 +80,24 @@ class tkFunc(object):
         l1.place(x=30, y=30)
         e1.place(x=80, y=30)
 
+        # 给定端口起点
+        startPortTxT = StringVar()
+        startPortTxT.set('20000起，每个客户端增加1000（删除这句话）')
+        l2 = Label(self.top, text='起始端口', bg='green')
+        e2 = Entry(self.top, show=None, textvariable=startPortTxT)
+        l2.place(x=30, y=80)
+        e2.place(x=80, y=80)
+
+        # 线程数
+        threadTxT = StringVar()
+        l3 = Label(self.top, text='线程数', bg='green')
+        e3 = Entry(self.top, show=None, font=('Arial', 14), textvariable=threadTxT)
+        l3.place(x=30, y=130)
+        e3.place(x=80, y=130)
+
         #确认的button
         btn_comfirm_sign_up = Button(self.top, text='确定', command=ConfirmConfig)
-        btn_comfirm_sign_up.place(x=180, y=120)
+        btn_comfirm_sign_up.place(x=180, y=200)
 
     def CreateMenuBar(self):
         # 菜单栏
@@ -81,31 +106,6 @@ class tkFunc(object):
         menubar.add_cascade(label='菜单', menu=filemenu)
         filemenu.add_command(label='配置', command=self.EditConfig)
         self.window.config(menu=menubar)
-
-    def ShowUsernameAndPort(self):
-        # 如果已有配置文件，则显示配置
-        configFile = None
-        for root, dirs, files in os.walk("."):
-            for file in files:
-                if os.path.splitext(file)[1] == '.config':
-                    configFile = os.path.join(root, file)
-                    break
-
-        if configFile is not None:
-            with open(configFile, 'r') as f:
-                config = f.read()
-                jsonTxt = json.loads(config)
-                username = jsonTxt["username"]
-                port = jsonTxt["port"]
-
-            userTips = StringVar()
-            portTips = StringVar()
-            userTips.set(username)
-            portTips.set(port)
-            Label(self.window, text='账号:', bg='green').place(x=30, y=30)
-            Entry(self.window, state="readonly", textvariable=userTips).place(x=80, y=30)
-            Label(self.window, text='端口:', bg='green').place(x=30, y=60)
-            Entry(self.window, state="readonly", textvariable=portTips).place(x=80, y=60)
 
     def ShowGuide(self):
         # 操作指引
@@ -124,10 +124,13 @@ class tkFunc(object):
         configFile = None
         for root, dirs, files in os.walk("."):
             for file in files:
-                if os.path.splitext(file)[1] == '.config':
+                if file == 'config.txt':
                     configFile = os.path.join(root, file)
                     break
-        return  configFile
+
+            if configFile:
+                break
+        return configFile
 
     def ReadConfig(self):
         # 读取配置文件
@@ -154,18 +157,31 @@ class tkFunc(object):
         # 按钮组
         def OpenBrowser():
             jsonTxt = self.ReadConfig()
-            port = jsonTxt["port"]
-            self.DaMai.OpenBrowser(port)
+            startPort = jsonTxt["startPort"]
+            threadCount = jsonTxt["threadCount"]
+            # 打开多个浏览器
+            for i in range(0, threadCount):
+                port = startPort + i
+                self.DaMai.OpenBrowser(port)
+                # t = threading.Thread(target=test, args=(port,))
+                # t = threading.Thread(target=test)
+                # t.start()
+                # threads.append(t)
 
         def OpenTicketPage():
             jsonTxt = self.ReadConfig()
-            port = jsonTxt["port"]
-            browser = self.DaMai.GetBrowser(port)
-            url = urlTxT.get()
-            # 将抢票页面的URL写入配置文件
-            self.WriteConfig("ticketUrl", url)
+            startPort = jsonTxt["startPort"]
+            threadCount = jsonTxt["threadCount"]
 
-            browser.get(url)
+            # 打开抢票网页
+            for i in range(0, threadCount):
+                port = startPort + i
+                browser = self.DaMai.GetBrowser(port)
+                url = urlTxT.get()
+                # 将抢票页面的URL写入配置文件
+                self.WriteConfig("ticketUrl", url)
+
+                browser.get(url)
 
         Button(self.window, text="打开浏览器", command=OpenBrowser).place(x=30, y=200)
         urlTxT = StringVar()
@@ -181,16 +197,21 @@ class tkFunc(object):
             }
 
             jsonTxt = self.ReadConfig()
-            portInfo = jsonTxt["port"]
-            # dateInfo = date.get(date.curselection())
-            # priceInfo = price.get(price.curselection())
-            countInfo = countTxT.get()
-            strategyInfo = dic[var.get()]
+            startPort = jsonTxt["startPort"]
+            threadCount = jsonTxt["threadCount"]
             ticketUrl = jsonTxt["ticketUrl"]
 
-            result = self.DaMai.Buy(countInfo, strategyInfo, portInfo, ticketUrl)
-            print(result)
-
+            countInfo = countTxT.get()
+            priceInfo = priceTxT.get()
+            if priceInfo == "":
+                priceInfo = None
+            strategyInfo = dic[var.get()]
+            # 打开多个浏览器
+            for i in range(0, threadCount):
+                port = startPort + i
+                browser = self.DaMai.GetBrowser(port)
+                t = threading.Thread(target=self.DaMai.Buy, args=(countInfo, strategyInfo, browser, ticketUrl, priceInfo))
+                t.start()
 
         # # 获取票务信息
         # Button(self.window, text="获取票务信息", command=GetDateInfo).place(x=30, y=250)
@@ -214,8 +235,13 @@ class tkFunc(object):
         # 价格策略
         Label(self.window, text='抢票策略', bg='green').place(x=150, y=250)
         var = IntVar()
-        r1 = Radiobutton(self.window, text='从低到高', variable=var, value=1).place(x=200, y=250)
-        r2 = Radiobutton(self.window, text='从高到低', variable=var, value=2).place(x=200, y=270)
+        Radiobutton(self.window, text='从低到高', variable=var, value=1).place(x=200, y=250)
+        Radiobutton(self.window, text='从高到低', variable=var, value=2).place(x=200, y=270)
+
+        # 票价
+        Label(self.window, text='票价', bg='green').place(x=300, y=250)
+        priceTxT = StringVar()
+        Entry(self.window, textvariable=priceTxT, width=5).place(x=350, y=250)
 
         # 抢票按钮
         Button(self.window, text="开始抢票", command=Start, height=10, width=10).place(x=650, y=300)
@@ -223,7 +249,7 @@ class tkFunc(object):
 if __name__ == '__main__':
     tk = tkFunc()
     tk.CreateMenuBar()
-    tk.ShowUsernameAndPort()
+    # tk.ShowUsernameAndPort()
     tk.ShowGuide()
     tk.ShowBtns()
 
