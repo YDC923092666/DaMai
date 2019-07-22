@@ -49,9 +49,9 @@ class DaMaiFunc(object):
     def BuyFromHighToLow(self, ticketList):
         priceIndex = None  # 价格的索引
         dateIndex = None  # 场次的索引
-        for i in range(len(ticketList["performBases"]), 0, -1):
+        for i in range(0, len(ticketList["performBases"])):
             tmp = ticketList["performBases"][i]["performs"][0]["skuList"]
-            for j in range(0, len(tmp)):
+            for j in range(len(tmp) - 1, -1, -1):
                 if tmp[j]['skuEnable'] is True:
                     priceIndex = j
                     dateIndex = i
@@ -92,7 +92,6 @@ class DaMaiFunc(object):
                 tmp = performBases[i]["performs"][0]["skuList"]
                 for j in range(0, len(tmp)):
                     if price == tmp[j]['price'] and tmp[j]['skuEnable'] is True:
-                        print("OK")
                         priceIndex = j
                         dateIndex = i
                         break
@@ -162,6 +161,8 @@ class DaMaiFunc(object):
             print("即将开售！刷新页面！")
             return 1
         elif allTicket["buyBtnText"] == "立即预订":
+            print("开始抢票！")
+        elif allTicket["buyBtnText"] == "立即购买":
             print("开始抢票！")
         else:
             print("未知情况")

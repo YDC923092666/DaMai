@@ -4,6 +4,7 @@ from tkinter import *
 import random
 import json
 import os
+import sys
 from DaMaiFunc import DaMaiFunc
 import threading
 
@@ -190,6 +191,7 @@ class tkFunc(object):
         Button(self.window, text="进入抢票页面", command=OpenTicketPage).place(x=400, y=200)
 
     def ChooseTicketInfo(self):
+        threadList = []
         def Start():
             dic = {
                 1: self.DaMai.BuyFromLowToHigh,
@@ -213,20 +215,6 @@ class tkFunc(object):
                 t = threading.Thread(target=self.DaMai.Buy, args=(countInfo, strategyInfo, browser, ticketUrl, priceInfo))
                 t.start()
 
-        # # 获取票务信息
-        # Button(self.window, text="获取票务信息", command=GetDateInfo).place(x=30, y=250)
-        #
-        # #场次单选框
-        # Label(self.window, text='场次', bg='green').place(x=30, y=300)
-        # date = Listbox(self.window)    # 创建Listbox
-        # date.place(x=100, y=300)
-        # Button(self.window, text="刷新价格", command=GetPriceInfo).place(x=250, y=300)
-        #
-        # # 价格单选框
-        # Label(self.window, text='价格', bg='green').place(x=340, y=300)
-        # price = Listbox(self.window)    # 创建Listbox
-        # price.place(x=380, y=300)
-
         # 数量
         Label(self.window, text='数量', bg='green').place(x=30, y=250)
         countTxT = StringVar()
@@ -244,7 +232,7 @@ class tkFunc(object):
         Entry(self.window, textvariable=priceTxT, width=5).place(x=350, y=250)
 
         # 抢票按钮
-        Button(self.window, text="开始抢票", command=Start, height=10, width=10).place(x=650, y=300)
+        Button(self.window, text="开始抢票", command=Start, height=10, width=10).place(x=550, y=300)
 
 if __name__ == '__main__':
     tk = tkFunc()
