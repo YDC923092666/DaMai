@@ -1,0 +1,2 @@
+1、解压chromedriver_win32到chrome浏览器一个目录  支持谷歌浏览器70版本
+2、将chrome.exe所在文件夹添加到环境变量
